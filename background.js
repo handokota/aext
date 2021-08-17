@@ -104,30 +104,30 @@ function downloadAsCRXFile(url,fileName){
         saveAs:true
     });
 }
-chrome.contextMenus.create({
-    'title': 'Download this extension',
-    'contexts': ['all'],
-   'id':"parent",
-    'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
-});
-chrome.contextMenus.create({
-    'title': 'Download CRX for this extension',
-    'contexts': ['all'],
-    'onclick': function(){
-        download("crx")
-    },
-    parentId: "parent",//No i18n
-    'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
-});
-chrome.contextMenus.create({
-    'title': 'Download ZIP for this extension',
-    'contexts': ['all'],
-    'onclick': function () {
-        download("zip")
-    },
-    parentId: "parent",//No i18n
-    'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
-});
+// chrome.contextMenus.create({
+//     'title': 'Download this extension',
+//     'contexts': ['all'],
+//    'id':"parent",
+//     'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
+// });
+// chrome.contextMenus.create({
+//     'title': 'Download CRX for this extension',
+//     'contexts': ['all'],
+//     'onclick': function(){
+//         download("crx")
+//     },
+//     parentId: "parent",//No i18n
+//     'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
+// });
+// chrome.contextMenus.create({
+//     'title': 'Download ZIP for this extension',
+//     'contexts': ['all'],
+//     'onclick': function () {
+//         download("zip")
+//     },
+//     parentId: "parent",//No i18n
+//     'documentUrlPatterns': ['https://chrome.google.com/webstore/detail/*']
+// });
 // chrome.runtime.setUninstallURL("https://thebyteseffect.com/posts/reason-for-uninstall-crx-extractor/", null);
 // chrome.runtime.onInstalled.addListener(function (details) {
 //     if (details.reason == "install") {
